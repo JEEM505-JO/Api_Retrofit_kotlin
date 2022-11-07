@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.devnic.webservices.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_rickMortyFragment"
+            app:destination="@id/rickMortyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rickMortyFragment"
+        android:name="com.devnic.webservices.ui.uirm.RickMortyFragment"
+        android:label="fragment_rick_morty"
+        tools:layout="@layout/fragment_rick_morty" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.devnic.webservices.ui.uiuser.UserFragment"
+        android:label="UserFragment" />
+</navigation>

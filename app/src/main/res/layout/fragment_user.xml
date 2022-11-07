@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="view"
+            type="com.devnic.webservices.ui.uiuser.UserViewModel" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.uiuser.UserFragment">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnpush"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Push JSON"
+            android:onClick="@{() -> view.seddata()}"
+            android:textSize="20sp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+           />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvsmsresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{view.sms}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+           />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvcodrsult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{view.code}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/GetData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Obtener Usuarios"
+            android:onClick="@{() -> view.getUser()}"
+            android:textSize="20sp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleruser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
